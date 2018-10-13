@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/" name="FoodAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/dialogpay">
+        <inSequence>
+            <log description="" level="custom">
+                <property name="message">
+            </log>
+            <send>
+                <endpoint key="DialogPay"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+	
+	<resource methods="GET" uri-template="/sampathpay">
+        <inSequence>
+            <log description="" level="custom">
+                <property name="message">
+            </log>
+            <send>
+                <endpoint key="SampathPay"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+	
+</api>

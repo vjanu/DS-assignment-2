@@ -1,0 +1,38 @@
+<br/><br/><br/><br/><br/><br/><br/><div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui image header">
+      <div class="content">
+        Log in to your account
+      </div>
+    </h2>
+    <form  method="get" class="ui large form">
+      <div class="ui stacked secondary  segment" >
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="text" name="username" placeholder="Username" required>
+          </div>
+          <div *ngIf="!username.valid" class="help-block">Username is required</div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="password" name="password" placeholder="Password" required>
+          </div>
+          <div *ngIf="!password.valid" class="help-block">Password is required</div>
+        </div>
+        
+        <div  class="ui fluid large secondary submit button" (click)="btnClick()">Login</div>
+      
+      </div>
+
+      <div class="ui error message"></div>
+
+    </form>
+
+    <div class="ui message">
+      New User? <a href="">Register Now</a>
+    </div>
+  </div>
+</div>
+

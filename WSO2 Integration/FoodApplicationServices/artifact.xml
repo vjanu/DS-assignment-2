@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="DialogPay" groupId="com.example.FoodApplicationServices.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/DialogPay.xml</file>
+    </artifact>
+	<artifact name="SampathPay" groupId="com.example.FoodApplicationServices.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/SampathPay.xml</file>
+    </artifact>
+    <artifact name="FoodAPI" groupId="com.example.FoodApplicationServices.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/FoodAPI.xml</file>
+    </artifact>
+</artifacts>

@@ -1,0 +1,251 @@
+<div class="pusher">
+  <div class="ui grid container">
+                  <!-- Nav Bar -->
+                  <div class="computer tablet only row" style="margin-top: 20px">
+                          <div class="ui fixed inverted menu navbar" style="height: 48px">
+                              <a href="" class="active right item">Home</a>
+                              <a href="" class="item">Logout</a>
+                          </div>
+                      </div>
+                      <!-- Nav Bar -->
+    <!-- Non-responsive DESKTOP main left menu -->
+    <div class="ui left fixed vertical inverted menu">
+      <div class="ui message" style="border-radius:0px"><div class="header"><h4><b style="color:#f74e4e">Online</b> Catering Service</h4></div></div>
+      
+      <div class="ui message" style="border-radius:0px;background-color:transparent;padding:0px;margin-top:0px;text-align:center">
+      <a class="item" href="/login/">
+          <img class="ui centered small circular image" src="/assets/images/Admin.png"><br />
+          <p><b style="color:#f74e4e">Logged in as,</b></p>
+          <h4 class="ui grey header">Saman</h4>
+        
+      </a>
+      </div>
+      
+      <a align="center"class="active gray item" routerLink="home">
+          Home
+      </a>
+
+     
+      
+      
+    </div>
+
+    
+
+    <div class="ui main grid">
+
+      <!-- Responsive top menu -->
+      <div class="ui fixed inverted main menu">
+        <div class="ui container">
+          <a class="launch icon item sidebar-toggle">
+            <i class="sidebar icon"></i>
+          </a>
+        </div>
+      </div>
+
+      </div>
+      </div>
+
+      
+
+<div class="ui grid" style="margin-left: 250px;margin-top: 10px; margin-right: 25px">
+
+<div class="ui mini icon message" >
+  <i class="coffee icon"></i>
+  <div class="content">
+    <div class="header"><h4>
+        Welcome to Online <b style="color:#f74e4e">Cater For You Service.</b>We serve the Best</h4>
+    </div>
+  </div>
+</div>
+
+
+<div class="ui internally celled grid">
+  <div class="row">
+    <div class="six wide column">
+        <div class="ui horizontal divider">
+            Food We Serve Here
+          </div>
+     <div class="field" style='overflow-y:scroll'>
+      <table class="ui very basic collapsing celled table">
+        <thead>
+          <tr><th>Food Item</th>
+          <th>Price</th>
+        </tr></thead>
+        <tbody>
+        
+          <tr *ngFor="let food of foodlist">
+            <td>
+              <h4 class="ui image header">
+                <img src="assets/images/1.png" class="ui mini rounded image">
+                <div class="content">
+                  {{food.foodName}}
+                  <div class="sub header"> {{food.foodDescription}}
+                </div>
+              </div>
+            </h4></td>
+            <td>
+              {{food.price}}
+            </td>
+          </tr>
+       
+        
+        </tbody>
+      </table>
+        
+       </div>
+
+
+
+
+
+
+       <div class="ui horizontal divider">
+          Selected Food Item
+        </div>
+        <div>
+            <div class="ui tiny form">
+                <div class="four fields">
+                  <div class="field">
+                    <label>Food Item</label>
+                    <input placeholder="Food Item" readonly="" type="text" >
+                  </div>
+                  <div class="field">
+                    <label>Unit Price</label>
+                    <input placeholder="Unit Price" readonly="" type="text">
+                  </div>
+                  <div class="field">
+                      <label>Quantity</label>
+                      <input placeholder="Quantity"  type="text">
+                    </div>
+                    <div class="field">
+                        <label>Total Price</label>
+                        <input placeholder="Total Price" readonly="" type="text">
+                      </div>
+                </div>
+              </div>
+              <div class="ui tiny form"  align="center">
+                    <div class="one fields">
+                      <div class="field" >
+                        <label>Grand Total</label>
+                        <input placeholder="Grand Total" readonly="" type="text">
+                      </div>
+                     
+                    </div>
+                    <div >
+                        <button class="tiny ui secondary button">Submit Your Item</button>
+                       </div>
+                      </div>
+
+      </div>
+<br/><br/><br/>
+<div style="position:absolute; left:110px; top:570px;"> 
+      <div class="ui compact menu">
+        <a class="item">
+          <i class="dollar sign icon"></i> Total Star Points
+          <div class="floating ui red label">22</div>
+        </a>
+        </div>
+  </div> </div>
+    <div class="ten wide column">
+        <div class="ui horizontal divider">
+            Make Your Order
+          </div>
+<!-- form starts -->
+      <div class="ui small form" >
+        <h4 class="ui dividing header">Order Information</h4>
+        <div class="field">
+          <label>Name</label>
+          <div class="two fields">
+            <div class="field">
+              <input type="text" name="firstname" placeholder="First Name" required="true">
+            </div>
+            <div class="field">
+              <input type="text" name="lastname" placeholder="Last Name">
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Billing Address</label>
+          <div class="fields">
+            <div class="twelve wide field">
+              <input type="text" name="address" placeholder="Street Address">
+            </div>
+            
+          </div>
+        </div>
+        
+        <h4 class="ui dividing header">Billing Information</h4>
+        <div class="field">
+    
+        </div>
+       
+        <div class="ui form">
+            <div class="inline fields">
+              <label>Pay By</label>
+              <div class="field">
+                <div>
+                  <input type="radio" id="pay" name="pay" checked="true" tabindex="0" class="hidden">
+                  <label>Phone</label>
+                </div>
+              </div>
+              <div class="field">
+                <div >
+                  <input type="radio"  id="pay" name="pay" tabindex="0" class="hidden">
+                  <label>Credit Card</label>
+                </div>
+              </div>             
+            </div>
+         
+        </div>
+        <div class="fields">
+          <div class="seven wide field">
+                <label>Phone Number</label>
+                <input type="text" name="phonenumber" maxlength="16" placeholder="Phone Number">
+                <label>Pin Number</label>
+                <input type="text" name="pinnumber" maxlength="4" placeholder="Pin #">
+          </div>
+          <div class="seven wide field">
+            <label>Card Number</label>
+            <input type="text" name="cardnumber" maxlength="16" placeholder="Card #">
+          </div>
+          <div class="three wide field">
+            <label>CVC</label>
+            <input type="text" name="cardcvc" maxlength="3" placeholder="CVC">
+          </div>
+    
+        </div>
+
+         <h4 class="ui dividing header">Receipt</h4>
+      
+         <div class="ui form">
+            <div class="inline field">
+              <label>SMS</label>
+              <input type="text" placeholder="Phone #" required>
+              <button class="tiny ui secondary button" (click)="sendSMS()">Send</button>
+              <div class="ui mini  green message">{{sms}}</div>
+            </div>
+            <div class="inline field">
+                <label>Email</label>
+                <input type="text" placeholder="Email"  required>
+                <button class="tiny ui secondary button" (click)="sendEmail()">Send</button>
+                <div class="ui mini green message">{{email}}</div>
+              </div>
+          </div>
+
+        <br/>
+        <button class="tiny ui secondary button" (click)= "getOrder()">Submit Order</button>
+        <div class="ui mini green message">{{order}}</div>
+        </div>
+    
+      <!-- form ends -->
+    </div>
+  </div>   
+</div>
+
+
+
+
+</div>
+
+
